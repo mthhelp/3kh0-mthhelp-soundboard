@@ -1,18 +1,35 @@
 body {
   font-size: 12px;
-  background: #202020;
+  background: var(--inner-dark-red);
   border-style: none;
   font-family: helvetica, arial, sans-serif;
 }
+h1, h2, p, a, div, h3, h4, h5,h6{
+  color: var(--text-color);
+}
+
+:root {
+  --border-red-color: #FF0000;
+  --inner-dark-red: #3D0000;
+  --inner-dark-red-lighter: #6b0000;
+  --text-color: white;
+  --tabindc-color: var(--text-color);
+  --tools-it-col-: black;
+}
 .sound {
-  border-style: outset;
+  border-style: groove;
+  padding: 5px;
   width: 100px;
   height: 170px;
-  border-radius: 10px;
-  border-color: #000;
-  background-color: #0b3b46;
+  border-radius: 15px;
+  border-color: none;
+  background-color: var(--inner-dark-red);
   color: white;
   margin: 10px;
+  -webkit-box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.62);
+  -moz-box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.62);
+  box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.62);
+  border: 1px var(--inner-dark-red-lighter) solid;
 }
 .download {
   cursor: pointer;
@@ -73,23 +90,31 @@ body {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  background-color: #202020;
+  background-color: var(--inner-dark-red);
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+  gap: 7px;
 }
-.flex-container > div {
-  padding: 7px;
 
-}
 div.control {
   position: fixed;
-  top: 3px;
+  display: block;
+  top: 5px;
   color: white;
-  right: 3px;
+  right: 5px;
   width: auto;
-  padding: 3px;
-  border: 3px solid #000;
+  padding: 5px;
+  border: 3px solid var(--inner-dark-red-lighter);
   border-radius: 10px;
-  background: #0b3b46;
+  background: var(--inner-dark-red);
   z-index: 100;
+  -webkit-box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.62);
+-moz-box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.62);
+box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.62);
+}
+div.control button{
+border: solid 1px var(--border-red-color);
+border-radius: 0.3rem;
 }
 .woah {
   cursor: pointer;
